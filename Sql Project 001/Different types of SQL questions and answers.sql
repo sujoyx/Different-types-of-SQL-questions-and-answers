@@ -2,7 +2,7 @@
 SELECT 
    first_name 
 FROM patients 
-WHERE first_name like 'C%';
+WHERE first_name LIKE 'C%';
 
 -- Show first name and last name of patients that weight within the range of 100 to 120 (inclusive).
 SELECT
@@ -91,15 +91,15 @@ AND allergies IS NOT NULL;
 
 -- Based on cities where our patient lives in, write a query to display the list of unique city starting with a vowel (a, e, i, o, u). Show the result order in ascending by city.
  SELECT
- distinct city
- from patients
- where 
- city like 'a%'
- or city like 'e%'
- or city like 'i%'
- or city like 'o%'
- or city like 'u%'
- order by city ;
+ DISTINCT city
+ FROM patients
+ WHERE 
+ city LIKE 'a%'
+ OR city LIKE 'e%'
+ OR city LIKE 'i%'
+ OR city LIKE 'o%'
+ OR city LIKE 'u%'
+ ORDER BY city ;
 
 -- Show unique birth years from patients and order them by ascending.
  SELECT
@@ -131,8 +131,8 @@ AND allergies IS NOT NULL;
     FROM patients 
     WHERE gender= 'M') AS male_count,
  COUNT(gender) AS female_count 
- from patients 
- where gender = 'F';
+ FROM patients 
+ WHERE gender = 'F';
  
  -- Show first and last name, allergies from patients which have allergies to either 'Penicillin' or 'Morphine'. Show results ordered ascending by allergies then by first_name then by last_name.
  SELECT 
@@ -166,17 +166,3 @@ AND allergies IS NOT NULL;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
