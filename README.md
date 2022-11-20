@@ -1,1 +1,1 @@
-# Different-types-of-SQL-questions-and-answers
+# Different types of SQL questions and answers
